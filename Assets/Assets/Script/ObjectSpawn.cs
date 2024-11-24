@@ -23,6 +23,7 @@ public class ObjectSpawn : MonoBehaviour
         if (timer <= 0)
         {
             Vector3 objectPosition = new Vector3(Random.Range(-4.0f, 4.0f), transform.position.y, transform.position.z);
+            index = Random.Range(0, 1);
             Instantiate(objects[index], objectPosition, transform.rotation);
             timer = timeDelay;
         }
