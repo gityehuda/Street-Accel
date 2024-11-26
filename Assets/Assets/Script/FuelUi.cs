@@ -9,10 +9,12 @@ public class FuelUi : MonoBehaviour
     public Image fuelImage;
     public MenuUI menu;
     public GameOverController gameOverController;
+    private ScoreUI scoreUI;
 
     void Awake()
     {
         cd = FindObjectOfType<CarDriving>();
+        scoreUI = FindObjectOfType<ScoreUI>();
     }
 
     // Update is called once per frame
@@ -23,6 +25,7 @@ public class FuelUi : MonoBehaviour
         {
             menu.GameOver();
             gameOverController.gameOver();
+            scoreUI.isGameOver = true;
         }
     }
 }

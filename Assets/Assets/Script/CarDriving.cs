@@ -29,6 +29,7 @@ public class CarDriving : MonoBehaviour
             fuel = maxfuel;
         }
         fuel -= Time.deltaTime;
+        
     }
 
 }

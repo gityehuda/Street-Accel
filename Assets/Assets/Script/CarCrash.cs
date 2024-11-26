@@ -7,11 +7,12 @@ public class CarCrash : MonoBehaviour
 {
     public MenuUI menu;
     public GameOverController gameOverController;
+    private ScoreUI scoreUI;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        scoreUI = FindObjectOfType<ScoreUI>();
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -21,6 +22,7 @@ public class CarCrash : MonoBehaviour
             Destroy(gameObject);
             menu.GameOver();
             gameOverController.gameOver();
+            scoreUI.isGameOver = true;
         }
     }
 
