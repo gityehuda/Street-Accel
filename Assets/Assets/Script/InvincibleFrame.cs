@@ -5,17 +5,10 @@ using UnityEngine;
 public class InvincibleFrame : MonoBehaviour
 {
     public float duration;
-    private float timer;
-
-    // Update is called once per frame
-    void Update()
-    {
-        timer = timer - Time.deltaTime < 0 ? 0 : timer - Time.deltaTime;
-    }
+    public GameObject shield;
 
     public void activate()
     {
-        timer = duration;
         StartCoroutine(blink());
         deactivateCollider();
     }
@@ -32,20 +25,9 @@ public class InvincibleFrame : MonoBehaviour
 
     private IEnumerator blink()
     {
-        SpriteRenderer sr = GetComponent<SpriteRenderer>();
-
-        Color defaultColor = sr.color;
-        Color hitColor = defaultColor;
-        hitColor.a = 0.5f;
-
-        while(timer > 0)
-        {
-            sr.color = hitColor;
-            yield return new WaitForSeconds(0.1f);
-            sr.color = defaultColor;
-            yield return new WaitForSeconds(0.1f);
-        }
-        sr.color = defaultColor;
+        yield return new WaitForSeconds(duration);
+       
+        shield.SetActive(false);
         activateCollider();
     }
 

@@ -7,6 +7,7 @@ public class CarCrash : MonoBehaviour
 {
     public MenuUI menu;
     public GameOverController gameOverController;
+    public GameObject shield;
     private ScoreUI scoreUI;
     private AudioSource audioSource;
     private InvincibleFrame inFrame;
@@ -29,6 +30,18 @@ public class CarCrash : MonoBehaviour
             scoreUI.isGameOver = true;
             audioSource.enabled = false;
         }
+
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.gameObject.tag == "Shield")
+        {
+            Destroy(collision.gameObject);
+            inFrame.activate();
+            shield.SetActive(true);
+        }
+
     }
 
 }
