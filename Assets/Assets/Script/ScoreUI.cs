@@ -5,8 +5,8 @@ using TMPro;
 
 public class ScoreUI : MonoBehaviour
 {
-    public TMP_Text text;
-    int score;
+    public TMP_Text scoreText;
+    public int score;
     public bool isGameOver;
 
     // Start is called before the first frame update
@@ -20,7 +20,7 @@ public class ScoreUI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        text.text = score.ToString();
+        scoreText.text = score.ToString();
         
     }
 
@@ -30,7 +30,8 @@ public class ScoreUI : MonoBehaviour
         {
             score += 1;
         }
-        
+
+        return;
     }
 
 }

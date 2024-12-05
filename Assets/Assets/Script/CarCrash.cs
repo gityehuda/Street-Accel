@@ -5,36 +5,35 @@ using UnityEngine.UIElements;
 
 public class CarCrash : MonoBehaviour
 {
-    public MenuUI menu;
-    public GameOverController gameOverController;
     public GameObject shield;
-    private ScoreUI scoreUI;
-    private AudioSource audioSource;
+    [SerializeField] private AudioSource drive;
     private InvincibleFrame inFrame;
+    private Animator animator;
+    private CarDriving cd;
+    [SerializeField] private AudioSource crash;
 
     // Start is called before the first frame update
     void Start()
     {
-        scoreUI = FindObjectOfType<ScoreUI>();
-        audioSource = GetComponent<AudioSource>();
         inFrame = GetComponent<InvincibleFrame>();
-    }
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if(collision.gameObject.tag == "Enemy")
-        {
-            Destroy(gameObject);
-            menu.GameOver();
-            gameOverController.gameOver();
-            scoreUI.isGameOver = true;
-            audioSource.enabled = false;
-        }
-
+        animator = GetComponent<Animator>();
+        cd = GetComponent<CarDriving>();
+        crash.enabled = false;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if(collision.gameObject.tag == "Enemy")
+        {
+            animator.SetTrigger("Explode");
+            cd.isControllable = false;
+            Destroy(gameObject, 5f/6f);
+            GameManager.GetInstance().Score();
+            GameManager.GetInstance().GameOver();
+            drive.enabled = false;
+            crash.enabled = true;
+        }
+
         if(collision.gameObject.tag == "Shield")
         {
             Destroy(collision.gameObject);
@@ -43,5 +42,6 @@ public class CarCrash : MonoBehaviour
         }
 
     }
+
 
 }
