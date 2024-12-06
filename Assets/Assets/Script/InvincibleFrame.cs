@@ -4,18 +4,30 @@ using UnityEngine;
 
 public class InvincibleFrame : MonoBehaviour
 {
-    public float duration;
-    public GameObject shield;
+    //public float duration;
+    private SpeedBoost sb;
 
-    public void activate()
+    void Awake()
     {
-        StartCoroutine(blink());
-        deactivateCollider();
+        sb = FindObjectOfType<SpeedBoost>();    
+    }
+
+    void Update()
+    {
+        if(sb.isProtected == true)
+        {
+            deactivateCollider();
+        }
+        else
+        {
+            activateCollider();
+        }
     }
 
     private void deactivateCollider()
     {
         GetComponent<Collider2D>().enabled = false;
+        
     }
 
     private void activateCollider()
@@ -23,12 +35,11 @@ public class InvincibleFrame : MonoBehaviour
         GetComponent<Collider2D>().enabled = true;
     }
 
-    private IEnumerator blink()
+   /* private IEnumerator blink()
     {
         yield return new WaitForSeconds(duration);
        
-        shield.SetActive(false);
         activateCollider();
-    }
+    }*/
 
 }

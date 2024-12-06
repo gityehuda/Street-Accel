@@ -8,6 +8,7 @@ public class SpeedBoost : MonoBehaviour
     public TrackLoop trackLoop2;
     public float duration;
     public GameObject shield;
+    public bool isProtected = false;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -15,18 +16,7 @@ public class SpeedBoost : MonoBehaviour
         {
             StartCoroutine(PowerUp());
             Destroy(collision.gameObject);
-            deactivateCollider();
         }
-    }
-
-    private void deactivateCollider()
-    {
-        GetComponent<Collider2D>().enabled = false;
-    }
-
-    private void activateCollider()
-    {
-        GetComponent<Collider2D>().enabled = true;
     }
 
     private IEnumerator PowerUp()
@@ -34,12 +24,13 @@ public class SpeedBoost : MonoBehaviour
         trackLoop1.speed = 30;
         trackLoop2.speed = 30;
         shield.SetActive(true);
+        isProtected = true;
         yield return new WaitForSeconds(duration);
 
         shield.SetActive(false);
-        activateCollider();
         trackLoop1.speed = 20;
         trackLoop2.speed = 20;
+        isProtected = false;
     }
 
 }

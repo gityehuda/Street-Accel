@@ -6,6 +6,7 @@ using UnityEngine.UIElements;
 public class CarCrash : MonoBehaviour
 {
     [SerializeField] private AudioSource drive;
+    private SpeedBoost sb;
     private Animator animator;
     private CarDriving cd;
     [SerializeField] private AudioSource crash;
@@ -13,6 +14,7 @@ public class CarCrash : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        sb = GetComponent<SpeedBoost>();
         animator = GetComponent<Animator>();
         cd = GetComponent<CarDriving>();
         crash.enabled = false;
@@ -20,7 +22,7 @@ public class CarCrash : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.tag == "Enemy")
+        if(collision.gameObject.tag == "Enemy" && sb.isProtected == false)
         {
             animator.SetTrigger("Explode");
             cd.isControllable = false;

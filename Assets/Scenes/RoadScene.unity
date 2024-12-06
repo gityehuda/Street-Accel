@@ -2730,7 +2730,7 @@ GameObject:
   - component: {fileID: 1769387906}
   m_Layer: 0
   m_Name: Shield
-  m_TagString: Untagged
+  m_TagString: Shield
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3304,6 +3304,12 @@ MonoBehaviour:
   trackLoop2: {fileID: 1048195789}
   duration: 7
   shield: {fileID: 1769387905}
+  enemy:
+  - {fileID: 1778761876997649747, guid: 4d22508ba2dd23e499b67e67d973bd8b, type: 3}
+  - {fileID: 5822022201033619435, guid: a54e43b5496c9894484eb25acca48628, type: 3}
+  - {fileID: 3983627295418750740, guid: 95fc31fd7246ef848857600d1cd8c3c6, type: 3}
+  - {fileID: 8328234442216953818, guid: b0eec9f63ba6ce94da66871cd231e941, type: 3}
+  - {fileID: 4786458528029541913, guid: 670cbf152ee35054dba09d4204c8e150, type: 3}
 --- !u!95 &8583323288000585881
 Animator:
   serializedVersion: 7
