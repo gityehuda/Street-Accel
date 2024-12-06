@@ -5,9 +5,7 @@ using UnityEngine.UIElements;
 
 public class CarCrash : MonoBehaviour
 {
-    public GameObject shield;
     [SerializeField] private AudioSource drive;
-    private InvincibleFrame inFrame;
     private Animator animator;
     private CarDriving cd;
     [SerializeField] private AudioSource crash;
@@ -15,7 +13,6 @@ public class CarCrash : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        inFrame = GetComponent<InvincibleFrame>();
         animator = GetComponent<Animator>();
         cd = GetComponent<CarDriving>();
         crash.enabled = false;
@@ -32,13 +29,6 @@ public class CarCrash : MonoBehaviour
             GameManager.GetInstance().GameOver();
             drive.enabled = false;
             crash.enabled = true;
-        }
-
-        if(collision.gameObject.tag == "Shield")
-        {
-            Destroy(collision.gameObject);
-            inFrame.activate();
-            shield.SetActive(true);
         }
 
     }
