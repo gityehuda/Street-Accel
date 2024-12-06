@@ -176,9 +176,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db666dac9c73aa642be6a9c3d42793c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 6
+  speed: 10
   fuel: 90
   maxfuel: 30
+  coin: 0
+  isControllable: 1
   maxPosition: 5.2
 --- !u!114 &4582658149755933768
 MonoBehaviour:
@@ -192,5 +194,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1533e66177bafe14e8ff12babbc6e0db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  menu: {fileID: 0}
-  gameOverController: {fileID: 0}
+  shield: {fileID: 0}
+  drive: {fileID: 0}
+  crash: {fileID: 0}
