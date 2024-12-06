@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 7d8fd635436a26f48a31140ea458b3f2
+guid: 7e022c3cb4bd2fa4e8502177d867eb1b
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -158,7 +158,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Shield Round Smooth Static 512x512 Green_0: 6883250934330161522
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

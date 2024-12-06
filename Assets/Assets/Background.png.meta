@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: bff140323b14ae2429fb39e01e78a1fe
+guid: 191460ebf12be284993d752864e8a048
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 882609532676062424
-    second: ifuelbazes_0
+      213: -1955448553306655712
+    second: Background_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -126,13 +126,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ifuelbazes_0
+      name: Background_0
       rect:
         serializedVersion: 2
-        x: 8
-        y: 6
-        width: 140
-        height: 186
+        x: 0
+        y: 0
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8dcb78691b8af3c00800000000000000
-      internalID: 882609532676062424
+      spriteID: 024fa93b6e9dcd4e0800000000000000
+      internalID: -1955448553306655712
       vertices: []
       indices: 
       edges: []
@@ -158,8 +158,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      ifuelbazes_0: 882609532676062424
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

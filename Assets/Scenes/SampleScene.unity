@@ -391,7 +391,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1010801dbdebd8447ae7a5b0c52ebc27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy: {fileID: 5822022201033619435, guid: a54e43b5496c9894484eb25acca48628, type: 3}
+  enemy:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   maxPosition: 4
   timeDelay: 1
 --- !u!1 &370760894
@@ -1420,8 +1423,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 6
+  fuel: 30
+  maxfuel: 30
+  coin: 0
+  isControllable: 1
   maxPosition: 4.4
-  menu: {fileID: 1258130682}
 --- !u!50 &1777471830
 Rigidbody2D:
   serializedVersion: 4

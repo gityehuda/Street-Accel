@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 3d9a5c4caab1541469f89d816d4e0335
+guid: 8873c4a1c0581754c9404178e09a8e62
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -283,7 +283,13 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Shield Round Smooth Hit Left 512x512 Green_0: -62123341871061413
+      Shield Round Smooth Hit Left 512x512 Green_1: 4388257972019680586
+      Shield Round Smooth Hit Left 512x512 Green_2: -6694547424709192804
+      Shield Round Smooth Hit Left 512x512 Green_3: -5895016437879137347
+      Shield Round Smooth Hit Left 512x512 Green_4: 8816571328895663392
+      Shield Round Smooth Hit Left 512x512 Green_5: 1158331559985910254
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

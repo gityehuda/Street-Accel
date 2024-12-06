@@ -158,7 +158,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      ifuelredbackgroud_0: 2648884282494057699
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
