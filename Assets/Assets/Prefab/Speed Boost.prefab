@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 1277650657160492252}
   - component: {fileID: 3549971378938123}
   - component: {fileID: 6302432861791489517}
-  - component: {fileID: 3447947334712222812}
   - component: {fileID: 4747915115905992579}
   m_Layer: 0
   m_Name: Speed Boost
@@ -150,21 +149,6 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 2.48, y: 4.81}
   m_Direction: 0
---- !u!114 &3447947334712222812
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1611714963988527952}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 45d8e8392ab64da4db4d07afefc8bb8e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  trackLoop1: {fileID: 0}
-  trackLoop2: {fileID: 0}
-  duration: 7
 --- !u!114 &4747915115905992579
 MonoBehaviour:
   m_ObjectHideFlags: 0

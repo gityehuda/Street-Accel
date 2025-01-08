@@ -6,6 +6,7 @@ using UnityEngine.Events;
 public class TrackLoop : MonoBehaviour
 {
     public float speed;
+    [SerializeField] private ScoreUI score;
     public GameObject[] gameObjects;
     public UnityEvent<SpriteRenderer> OnImageMoved;
     //float elapsedTime;
@@ -30,6 +31,20 @@ public class TrackLoop : MonoBehaviour
                 gameObjects[1] = temp;
             }
         }
+
+        if(score.score >= 400 && score.score <= 700)
+        {
+            speed = 25;
+        } 
+        else if(score.score > 700 && score.score <= 1000) 
+        {
+            speed = 30;
+        }
+        else if(score.score > 1000)
+        {
+            speed = 40;
+        }
+
         //foreach(GameObject go in gameObjects)
         //{
         //    go.transform.position += Vector3.down * Time.deltaTime * speed;
